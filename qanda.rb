@@ -6,7 +6,8 @@ Q_ARR = [
     "days_of_week = ['Tunezday', 'Wednesday', 'Friyay', 'Funday']\n \n days_of_week.each do |day|\n p 'Woohoo' if day == 'Friyay'\n p 'Boo' if day == 'Monday'\nend\n",
     "Which of the following is the opposite of an if/else statement?\n",
     "puts 123 > 321 ? '123 is the bigger number' : '321 is the bigger number'\n",
-    "What does DRY stand for?\n"
+    "What does DRY stand for?\n",
+    "How do you add a number to the START of an existing array? arr=[1,2,3]\n"
     ]
 
 A_ARR = [
@@ -17,5 +18,6 @@ A_ARR = [
     [3, "1: WoohooBoo", "2: Nothing", "3: Woohoo", "4: Boo"],
     [3, "1: Ternary Operators", "2: Case Statement", "3: Unless Statement", "4: If/Elsif/Else statement"],
     [4, "1: 123", "2: 321", "3: 123 is the bigger number", "4: 321 is the bigger number"],
-    [4,"Don't Rely on Yourself","Do Rinse Yourself","Do Repeat Yourself","Don't Repeat Yourself"]
+    [4, "1: Don't Rely on Yourself","2: Do Rinse Yourself","3: Do Repeat Yourself","4: Don't Repeat Yourself"],
+    [1, "1: arr.unshift 4", "2: arr.shift 4", "3: arr << 4", "4: arr.append 4"]
 ]
