@@ -1,26 +1,32 @@
 require 'colorize'
 require 'cli/ui'
-require_relative './qanda.rb'
+require_relative './qanda.rb' 
 
 def kahoot(no_of_questions)
+
 	i = 0
 	score = 0
-
+	q_bank = (0..Q_ARR.length).to_a
+	current_q = rand(Q_ARR.length)
+	
 	# Make a random number generator which won't repeat itself so I don't get repeat questions.
 	# Possibly make an array and delete the number once I'm done?
 	
 	while i < no_of_questions
-		puts QARR[3] # Change 0 to the random number variable when it's working
-		puts AARR[3][1..4] # Change first 0 to the random number variable when it's working
+		p q_bank
+		p current_q
+		puts Q_ARR[current_q] # Change 0 to the random number variable when it's working
+		puts A_ARR[current_q][1..4] # Change first 0 to the random number variable when it's working
 		puts "Which answer is correct? 1,2,3 or 4:"
 		answer = gets.chomp.to_i
-		if answer == AARR[3][0] # Change first 0 to the random number variable when it's working
+		if answer == A_ARR[current_q][0] # Change first 0 to the random number variable when it's working
 			score += 1
 			puts "You have entered the correct answer! Your score is now #{score}".colorize(:green)
 		else 
 			puts "Incorrect answer :( Your score is still #{score}".colorize(:red)
 		end
 	i += 1
+	Q_ARR.delete_at()
 	end
 	if score == no_of_questions
 		puts "Great work! You got all #{score} questions correct"
@@ -30,10 +36,11 @@ def kahoot(no_of_questions)
 end
 
 play_game = true
-no_of_questions = 2 #Remove this line once I set up method to do multiple questions
+no_of_questions = 3 #Remove this line once I set up method to do multiple questions
 
 while play_game == true
-    # print "How many questions would you like to answer? "
+	# puts "How many questions would you like to answer?"
+	# print "Maximum of #{Q_ARR.length} questions: "
 	# no_of_questions = gets.chomp.to_i
 	kahoot(no_of_questions)
 
@@ -50,3 +57,5 @@ while play_game == true
 end
 
 
+puts "Thans for Studying!"
+puts "See you next time :D"
