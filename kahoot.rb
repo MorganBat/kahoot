@@ -37,7 +37,6 @@ def kahoot(no_of_questions)
 end
 
 play_game = true
-no_of_questions = 1
 
 while play_game == true
 
