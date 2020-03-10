@@ -7,18 +7,18 @@ def kahoot(no_of_questions)
 	i = 0
 	score = 0
 	
-	q_bank = (0..Q_ARR.length-1).to_a.sort{rand() - 0.5}[0..no_of_questions-1] # This generates an array with the question numbers to pull from the question arr.
+	q_bank = (0..Q_ARR.length-1).to_a.sort{rand() - 0.5}[0..no_of_questions-1] # This generates an array with the question numbers to pull from the question array.
 
 	while i < no_of_questions
 		current_q = q_bank[i]
-		puts Q_ARR[current_q] # Change 0 to the random number variable when it's working
-		puts A_ARR[current_q][1..4] # Change first 0 to the random number variable when it's working
-		puts "Which answer is correct? 1,2,3 or 4:"
+		puts Q_ARR[current_q]
+		puts A_ARR[current_q][1..4]
+		puts "Which answer is correct? 1, 2, 3 or 4:"
 		answer = gets.chomp.to_i
 		unless answer == 1 || answer == 2 || answer == 3 || answer == 4
 			puts "Invalid answer. Please try again:"
 		else
-			if answer == A_ARR[current_q][0] # Change first 0 to the random number variable when it's working
+			if answer == A_ARR[current_q][0] 
 				score += 1
 				puts "You have entered the correct answer! Your score is now #{score}".colorize(:green)
 			else 
@@ -29,18 +29,18 @@ def kahoot(no_of_questions)
 	end
 
 	if score == no_of_questions
-		puts "Great work! You got all #{score} questions correct"
+		puts "Great work! You got all #{score} questions correct - 100%"
 	else 
-		percent = score/no_of_questions.to_f
-		percent *= 100
+		percent = ((score/no_of_questions.to_f)*100).round(2)
 		puts "Game complete! You scored #{score}/#{no_of_questions} or #{percent}%"
 	end
 end
 
 play_game = true
-# no_of_questions = 3 # Remove this line once I set up method to do multiple questions
+no_of_questions = 1
 
 while play_game == true
+
 	puts "How many questions would you like to answer?"
 	print "Maximum of #{Q_ARR.length} questions: "
 	no_of_questions = gets.chomp.to_i
@@ -55,7 +55,7 @@ while play_game == true
 		else
 			play_game = false
 		end
-		
+			
 end
 
 

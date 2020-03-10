@@ -3,9 +3,9 @@ Q_ARR = [
     "How would I import a file 'Dog.rb' into a file?\n", 
     "coder = {teacher: 'Garret', dev: 'Ragan'} \n How would I display the value 'Garret'?\n",
     "for i in 1...10\n puts 'I've been printed #"+"{i} times'\nend \n \nWhat will be the last thing printed to the screen?\n",
-    "days_of_week = ['Tunezday', 'Wednesday', 'Friyay', 'Funday']\n \n days_of_week.each do |day|\n p 'Woohoo' if day == 'Friyay'\n p 'Boo' if day == 'Monday'\nend\n",
+    "days_of_week = ['Tunezday', 'Wednesday', 'Friyay', 'Funday']\n \n days_of_week.each do |day|\n p 'Woohoo' if day == 'Friyay'\n p 'Boo' if day == 'Monday'\nend\nWhat will the previous code snippet output to the terminal?\n",
     "Which of the following is the opposite of an if/else statement?\n",
-    "puts 123 > 321 ? '123 is the bigger number' : '321 is the bigger number'\n",
+    "puts 123 > 321 ? '123 is the bigger number' : '321 is the bigger number'\nWhat will the previous statement output?\n",
     "What does DRY stand for?\n",
     "How do you add a number to the START of an existing array? arr=[1,2,3]\n"
     ]
