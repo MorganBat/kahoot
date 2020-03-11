@@ -10,14 +10,14 @@ Q_ARR = [
     "How do you add a number to the START of an existing array? arr=[1,2,3]\n"
     ]
 
-A_ARR = [
-    [1, "1: require 'colorize'", "2: require_relative 'colorize'", "3: add 'colorize'", "4: new gem 'colorize'"],
-    [2, "1: require_relative './classes/Dog.rb", "2: require_relative './Dog.rb", "3: require './Dog.rb'", "4: add 'Dog.rb'"],
-    [4, "1: p coder['Garret']", "2: p coder[teacher:]", "3: p coder[:dev]", "4: p coder[:teacher]"],
-    [1, "1: I've been printed 9 times", "2: I've been printed 10 times", "3: It will display an error", "4: It will be an infinite loop"],
-    [3, "1: WoohooBoo", "2: Nothing", "3: Woohoo", "4: Boo"],
-    [3, "1: Ternary Operators", "2: Case Statement", "3: Unless Statement", "4: If/Elsif/Else statement"],
-    [4, "1: 123", "2: 321", "3: 123 is the bigger number", "4: 321 is the bigger number"],
-    [4, "1: Don't Rely on Yourself","2: Do Rinse Yourself","3: Do Repeat Yourself","4: Don't Repeat Yourself"],
-    [1, "1: arr.unshift 4", "2: arr.shift 4", "3: arr << 4", "4: arr.append 4"]
-]
+    A_ARR = [
+        [1, "require 'colorize'", "require_relative 'colorize'", "add 'colorize'", "new gem 'colorize'"],
+        [2, "require_relative './classes/Dog.rb", "require_relative './Dog.rb", "require './Dog.rb'", "add 'Dog.rb'"],
+        [4, "p coder['Garret']", "p coder[teacher:]", "p coder[:dev]", "p coder[:teacher]"],
+        [1, "I've been printed 9 times", "I've been printed 10 times", "It will display an error", "It will be an infinite loop"],
+        [3, "WoohooBoo", "Nothing", "Woohoo", "Boo"],
+        [3, "Ternary Operators", "Case Statement", "Unless Statement", "If/Elsif/Else statement"],
+        [4, "123", "321", "123 is the bigger number", "321 is the bigger number"],
+        [4, "Don't Rely on Yourself","Do Rinse Yourself","Do Repeat Yourself","Don't Repeat Yourself"],
+        [1, "arr.unshift 4", "arr.shift 4", "arr << 4", "arr.append 4"]
+    ]
