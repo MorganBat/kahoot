@@ -7,7 +7,9 @@ Q_ARR = [
     "Which of the following is the opposite of an if/else statement?\n",
     "puts 123 > 321 ? '123 is the bigger number' : '321 is the bigger number'\nWhat will the previous statement output?\n",
     "What does DRY stand for?\n",
-    "How do you add a number to the START of an existing array? arr=[1,2,3]\n"
+    "How do you add a number to the START of an existing array? arr=[1,2,3]\n",
+    "What is one way we can install the 'colorize' gem through the terminal?\n",
+    "In the terminal, how do I view all gems I have installed?\n"
     ]
 
     A_ARR = [
@@ -19,5 +21,7 @@ Q_ARR = [
         [3, "Ternary Operators", "Case Statement", "Unless Statement", "If/Elsif/Else statement"],
         [4, "123", "321", "123 is the bigger number", "321 is the bigger number"],
         [4, "Don't Rely on Yourself","Do Rinse Yourself","Do Repeat Yourself","Don't Repeat Yourself"],
-        [1, "arr.unshift 4", "arr.shift 4", "arr << 4", "arr.append 4"]
+        [1, "arr.unshift 4", "arr.shift 4", "arr << 4", "arr.append 4"],
+        [1, "gem install colorize", "new gem colorize", "add colorize", "install gem colorize"],
+        [4, "gemlists", "list gems", "show gems", "gem list"]
     ]

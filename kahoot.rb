@@ -1,5 +1,6 @@
 require 'colorize'
 require 'cli/ui'
+require 'ruby_figlet'
 # require 'ffi'
 # require 'win32/sound'
 # require 'audio_player'
@@ -17,7 +18,6 @@ def kahoot(no_of_questions)
 	while i < no_of_questions
 
 		system "clear"
-
 		current_q = q_bank[i]
 
 		# answer = CLI::UI::Prompt.ask(Q_ARR[current_q]) do |handler|
@@ -42,10 +42,10 @@ def kahoot(no_of_questions)
 			if answer == correct_answer 
 				# sound.play(correct.wav)
 				score += 1
-				puts "You have entered the correct answer! Your score is now #{score}".colorize(:green)
+				puts "You have entered the correct answer! Your score is #{score}/#{i+1}".colorize(:green)
 			else 
 				# sound.play(incorrect.wav)
-				puts "Incorrect answer :( Your score is still #{score}".colorize(:red)
+				puts "Incorrect answer :( Your score is #{score}/#{i+1}".colorize(:red)
 				puts "The correct answer was '#{correct_answer}'"
 			end
 			i += 1
@@ -70,14 +70,14 @@ play_game = true
 
 system "clear"
 
-puts "Welcome to KaHoot!"
+puts (RubyFiglet::Figlet.new("Welcome to KaHoot!"))
+puts ""
 
 sleep(1)
 
 while play_game == true
 
-	puts "How many questions would you like to answer?"
-	print "Maximum of #{Q_ARR.length} questions: "
+	puts "How many questions would you like to answer? Maximum of #{Q_ARR.length}: "
 	no_of_questions = gets.chomp.to_i
 	if no_of_questions <= Q_ARR.length && no_of_questions > 0
 		kahoot(no_of_questions)
