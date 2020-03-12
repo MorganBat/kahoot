@@ -1,5 +1,3 @@
-TODO: Error Handling, Documentation, randomise order of answers
-
 ## Statement of Purpose & Scope
 
 This terminal app is a clone of the "Kahoot!" app we use for study reviews in class. Containing a bank of questions, it allows the user
@@ -7,7 +5,11 @@ to study as many or as few questions as they like.
 
 ## List of Features
 
+Initial menu - Welcomes the user to the program. Indicates to the player the most questions they can answer in one round (based on length of question array to make the program 'future proof'). If the player inputs an invalid selection then it will continually return an error message until a valid selection is entered.
 
+Main game - Lists a question which is randomly chosen from the main question bank. The user scrolls through the 4 available choices to indicate which one they believe is correct. If the answer is correct the green text indicates so and the users score is incremented and returned. Otherwise the correct answer is display.
+
+End of game - Upon finishing all their questions, they players final score is presented on screen and also converted to a percentage. The player can choose whether to play again or to exit the game.
 
 ## User Interaction
 
@@ -23,7 +25,26 @@ their selected questions, the user will be shown their total score and their per
 be shown a prompt on whether to study another round or exit the program.
 
 ## Implementation Plan
+<!-- Develop an implementation plan which: -->
+<!-- - outlines how each feature will be implemented and a checklist of tasks for each feature -->
+<!-- - prioritise the implementation of different features, or checklist items within a feature -->
+<!-- - provide a deadline, duration or other time indicator for each feature or checklist/checklist-item -->
+
+<!-- Utilise a suitable project management platform to track this implementation plan -->
+
+<!-- > Your checklists for each feature should have at least 5 items. -->
 
 
 
 ## Help Documentation
+
+<!-- Design help documentation which includes a set of instructions which accurately describe how to use and install the application. -->
+
+<!-- You must include: -->
+<!-- - steps to install the application -->
+<!-- - any dependencies required by the application to operate -->
+<!-- - any system/hardware requirements -->
+**Installation:**
+
+1. Unzip 'kahoot.rb' and 'qanda.rb' to the same directory
+2. Install the gems 'colorize', 'cli-ui', 'ruby_figlet', and io-console'

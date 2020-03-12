@@ -71,40 +71,45 @@ end
 
 play_game = true
 
-while play_game == true
+if Q_ARR.length == A_ARR.length
 
-	system "clear"	
-	puts (RubyFiglet::Figlet.new("Welcome to KaHoot!"))
-	puts ""
-	puts "How many questions would you like to answer? Maximum of #{Q_ARR.length} (type 'q' to quit): "
-	no_of_questions = gets.chomp
-	
-	if no_of_questions != "q"
-		no_of_questions = no_of_questions.to_i
-		if no_of_questions <= Q_ARR.length && no_of_questions > 0
-			kahoot(no_of_questions)
-		else
-			puts "Invalid selection"
-			invalid = true
-			sleep(1)
-		end
-	else
-		play_game = false
-		invalid = true
-	end
+	while play_game == true
 
-	if invalid != true
-		play_game_answer = CLI::UI::Prompt.ask("Would you like to play again?", options: %w(Yes No))
-		if play_game_answer == "Yes"
-			play_game = true
-			system "clear"
+		system "clear"	
+		puts (RubyFiglet::Figlet.new("Welcome to Kahoot!"))
+		puts ""
+		print "How many questions would you like to answer? Maximum of #{Q_ARR.length} (type 'q' to quit): "
+		no_of_questions = gets.chomp
+		
+		if no_of_questions != "q"
+			no_of_questions = no_of_questions.to_i
+			if no_of_questions <= Q_ARR.length && no_of_questions > 0
+				kahoot(no_of_questions)
+			else
+				puts "Invalid selection"
+				invalid = true
+				sleep(1)
+			end
 		else
 			play_game = false
+			invalid = true
 		end
-	else
+
+		if invalid != true
+			play_game_answer = CLI::UI::Prompt.ask("Would you like to play again?", options: %w(Yes No))
+			if play_game_answer == "Yes"
+				play_game = true
+				system "clear"
+			else
+				play_game = false
+			end
+		else
+		end
 	end
+
+	puts "See you next time :D"
+
+else
+	puts "There is an error with the Question and/or Answer bank."
+	puts "Please contact customer support"
 end
-
-
-puts "Thanks for Studying!"
-puts "See you next time :D"
